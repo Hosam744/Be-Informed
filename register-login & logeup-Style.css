@@ -1,0 +1,330 @@
+/***************************************************/
+/******{ DOC'css' } register-login & logeup ********/
+/***************************************************/
+/* POPPINS FONT */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url("backjpg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+
+/* From Uiverse.io by boryanakrasteva */ 
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    float: inline-start;
+
+  }
+  
+  .input {
+    border-style: none;
+    height: 40px;
+    width: 40px;
+    padding: 9px;
+    outline: none;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+    background-color: #061de915;
+    box-shadow: 0px 0px 3px #0fdb04;
+    padding-right: 40px;
+    color: #fff;
+  }
+  
+  .input::placeholder,
+  .input {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+  }
+  
+  .input::placeholder {
+    color: #8f8f8f;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border-style: none;
+    border-radius: 50%;
+    pointer-events: painted;
+    background-color: transparent;
+    transition: .2s linear;
+    float: inline-start;
+  }
+  
+  .icon:focus ~ .input,
+  .input:focus {
+    box-shadow: none;
+    width: 200px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 3px solid #7e4fd4;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+    z-index: 100;
+}
+.nav-logo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+.nav-menu ul{
+    display: flex;
+}
+.nav-menu ul li{
+    list-style-type: none;
+    
+}
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color:#08de28cd;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.nav-menu ul li .link:hover{
+    color:#0227f4cd; 
+}
+.link:hover, .active{
+    border-bottom: 2px solid #0227f4cd;
+}
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(145, 160, 147, 0.4);
+    border-color: #08de28cd;
+    border-radius: 25%;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: .3s ease;
+}
+.btn:hover{
+    color: black;
+    transform:scale(1.05);}
+#registerBtn{
+    background:linear-gradient(to right , #08de28cd , #0227f4cd );
+    margin-left: 15px;
+}
+
+#registerBtn:hover{
+    background-image:url(mars.jpg);
+    background-size: 35px;
+    background-repeat: no-repeat;
+}
+
+.btn.white-btn{
+    background:linear-gradient(to right , #08de28cd , #0227f4cd );
+}
+
+.btn.btn.white-btn:hover{
+    background-image:url(earth.jpg);
+    background-size: 35px;
+    background-repeat: no-repeat;
+}
+.nav-menu-btn{
+    display: none;
+}
+.form-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 512px;
+    height: 420px;
+    overflow: hidden;
+    z-index: 2;
+}
+.login-container{
+    position: absolute;
+    left: 4px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.register-container{
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.top span{
+    color: #fff;
+    font-size: small;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.top span a{
+    font-weight: 500;
+    color: #fff;
+    margin-left: 5px;
+}
+header{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+.two-forms{
+    display: flex;
+    gap: 10px;
+}
+.input-field{
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+.input-field:hover, .input-field:focus{
+    background: rgba(255, 255, 255, 0.25);
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.input-box i{
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #fff;
+}
+.submit{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background:linear-gradient(to right , #08de28cd , #0227f4cd ); 
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.submit:hover{
+    background-image: url(earth.jpg) ;
+    background-size: 35px;
+    background-repeat:no-repeat ;
+    color: #08de28cd;
+    box-shadow: 1px 5px 7px 1px #08de28cd ;
+}
+.two-col{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+.two-col .one{
+    display: flex;
+    gap: 5px;
+}
+.two label a{
+    text-decoration: none;
+    color: #fff;
+}
+.two label a:hover{
+    text-decoration: underline;
+}
+@media only screen and (max-width: 786px){
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        top: 60px;
+    }
+    .nav-menu{
+        position: absolute;
+        top: -1000px;
+        display: flex;
+        justify-content: center;
+        background: rgba(64, 3, 247, 0.432);
+        width: 100%;
+        height: 75vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+        margin: -40px;
+    }
+    .nav-menu-btn{
+        display: block;
+    }
+    .nav-menu-btn i{
+        font-size: 20px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .nav-menu-btn i:hover{
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+@media only screen and (max-width: 540px) {
+    .wrapper{
+        min-height: 100vh;
+    }
+    .form-box{
+        width: 100%;
+        height: 500px;
+    }
+    .register-container, .login-container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .register-container .two-forms{
+        flex-direction: column;
+        gap: 0;
+    }
+}

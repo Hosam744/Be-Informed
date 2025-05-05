@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="register-login & logeup-Style.css">
+    <link rel="icon" href="beicon.ico">
+    <title>BE Informed | Login & Registration</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-menu-btn">
+          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+        <div class="nav-logo">
+            <img src="belogo.png" alt="">
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+              <li><a href="index.html" class="link active">HOME</a></li>
+              <li><a href="earth (2).html" class="link">Earth</a></li>
+              <li><a href="Human_evolution.html" class="link">Human_evolution</a></li>
+              <li><a href="Sea.html" class="link">Sea</a></li>
+              <li><a href="Weather.html" class="link">Weather</a></li>
+              <li><a href="About_Us.html" class="link">About_Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+             <!-- From Uiverse.io by boryanakrasteva --> 
+        <div class="input-wrapper">
+          <button class="icon"> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"></path>
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20"></path>
+            </svg>
+          </button>
+          <input placeholder="search.." class="input" name="text" type="text">
+        </div>
+    </nav>
+
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username or Email">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+
+<script type="text/javascript" src="Secript.js"></script>
+
+
+</body>
+</html>

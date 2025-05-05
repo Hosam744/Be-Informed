@@ -1,0 +1,295 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background:linear-gradient(to top , #08de28cd , #0227f4cd );
+
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 35%;
+    left: calc(75% - 50px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(8000px) rotateX(-10deg) rotateY(0deg);
+    }to{
+        transform: perspective(8000px) rotateX(-10deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 2) * (360 / var(--quantity)) * 2deg))
+        translateZ(310px);
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    top: 19%;
+    bottom: 0;
+    left: 28%;
+    transform: translateX(-50%);
+    width: min(1000px, 55vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display:inline;
+    flex-wrap: wrap;
+    justify-content:right;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 3em;
+    line-height: 1em;
+    color: #000;
+    position: relative;
+    background:linear-gradient(to right , #08de28cd , #0227f4cd );
+
+}
+
+.banner .content p{
+    font-size: 1vw;
+    text-align: center;
+    margin-left: 5px;
+    font-weight: 600;    
+}
+
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner .slider{
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(180px);
+    }
+    .banner .content h1{
+        font-size: 5em;
+    }
+}
+
+
+/* Header section */
+
+header{
+  width: 100%; 
+  max-width: 100%;
+  padding-left:0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 23vh;
+  background: rgba(39, 39, 39, 0.4);
+}
+
+/* From Uiverse.io by boryanakrasteva */ 
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  float: inline-start;
+}
+
+.input {
+  border-style: none;
+  height: 40px;
+  width: 40px;
+  padding: 9px;
+  outline: none;
+  border-radius: 50%;
+  transition: .5s ease-in-out;
+  background-color: #061de915;
+  box-shadow: 0px 0px 3px #0fdb04;
+  padding-right: 40px;
+  color: #fff;
+}
+
+.input::placeholder,
+.input {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+}
+
+.input::placeholder {
+  color: #8f8f8f;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border-style: none;
+  border-radius: 50%;
+  pointer-events: painted;
+  background-color: transparent;
+  transition: .2s linear;
+  float: inline-start;
+  margin-top: 25px;
+}
+
+.icon:focus ~ .input,
+.input:focus {
+  box-shadow: none;
+  width: 200px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 3px solid #7e4fd4;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.nav{
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+  z-index: 100;
+}
+.nav-logo img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+.nav-menu ul{
+  display: flex;
+}
+.nav-menu ul li{
+  list-style-type: none;
+  
+}
+.nav-menu ul li .link{
+  text-decoration: none;
+  font-weight: 500;
+  color:#1aff00fc;
+  padding-bottom: 15px;
+  margin: 0 25px;
+}
+.nav-menu ul li .link:hover{
+  color:#0227f4cd; 
+}
+.link:hover, .active{
+  border-bottom: 2px solid #0227f4cd;
+}
+.nav-button .btn{
+  width: 130px;
+  height: 40px;
+  font-weight: 500;
+  background: rgba(145, 160, 147, 0.4);
+  border-color: #08de28cd;
+  border-radius: 25%;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: .3s ease;
+}
+.btn:hover{
+  color: black;
+  transform:scale(1.05);}
+#registerBtn{
+  background:linear-gradient(to right , #08de28cd , #0227f4cd );
+  margin-left: 15px;
+}
+
+#registerBtn:hover{
+  background-image:url(mars.jpg);
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+
+.btn.white-btn{
+  background:linear-gradient(to right , #08de28cd , #0227f4cd );
+}
+
+.btn.btn.white-btn:hover{
+  background-image:url(earth.jpg);
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+.nav-menu-btn{
+  display: none;
+}
+#bs1{
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Header section */
+
