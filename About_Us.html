@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="monetag" content="9739d4a7b3b6e6861771cd5c96f4cbc6"/>
-    <meta charset='utf-8'/>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
-    <link rel="icon" href="beicon.ico"/>
-    <title>Be Informed | About_Us</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'/>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
-    <meta name="keywords" content=""/>
-    <link rel='stylesheet' type='text/css' media='screen' href='be-style.css'/>
+  <meta name="monetag" content="9739d4a7b3b6e6861771cd5c96f4cbc6">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be Informed | Sea</title>
+  <meta name="keywords" content="">
+  <!-- Link Swiper's CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="be-style.css">
+  <style>
+      .collection{
+        background: url(Be-informed.png);
+        background-size: 100% 100%;
+      }
+     
+  </style>
 </head>
 <body>
-  <div class="wrapper">
-    <nav class="nav">
-        <div class="nav-menu-btn">
-          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+<nav class="nav">
+    <div class="nav-menu-btn">
+      <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+    </div>
+    <div class="nav-logo">
+        <img src="belogo.png" alt="">
+    </div>
+    <div class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html" class="link active">HOME</a></li>
+          <li><a href="earth.html" class="link">Earth</a></li>
+          <li><a href="Human_evolution.html" class="link">Human_evolution</a></li>
+          <li><a href="Sea.html" class="link">Sea</a></li>
+          <li><a href="Weather.html" class="link">Weather</a></li>
+          <li><a href="About_Us.html" class="link">About_Us</a></li>
+        </ul>
+    </div>
+    <!--
+    <div class="nav-button">
+      <button class="btn white-btn" id="loginBtn" onclick="login()"><a id="bs1" href="Registration_Document.html">Sign In</a></button>
+      <button class="btn" id="registerBtn" onclick="register()"><a id="bs1" href="Registration_Document.html">Sign Up</a></button>
+    </div>
+     -->
+         <!-- From Uiverse.io by boryanakrasteva --> 
+         <div class="input-wrapper">
+          <form action="index.html">
+              <button class="icon"> 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"></path>
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20"></path>
+                </svg>
+              </button>
+              <input placeholder="search.." class="input" name="text" type="text">
+          </form>
         </div>
-        <div class="nav-logo">
-            <img src="belogo.png" alt="">
-        </div>
-        <div class="nav-menu" id="navMenu">
-            <ul>
-              <li><a href="index.html" class="link active">HOME</a></li>
-              <li><a href="earth.html" class="link">Earth</a></li>
-              <li><a href="Human_evolution.html" class="link">Human_evolution</a></li>
-              <li><a href="Sea.html" class="link">Sea</a></li>
-              <li><a href="Weather.html" class="link">Weather</a></li>
-              <li><a href="About_Us.html" class="link">About_Us</a></li>
-            </ul>
-        </div>
-        <!--
-        <div class="nav-button">
-          <button class="btn white-btn" id="loginBtn" onclick="login()"><a id="bs1" href="Registration_Document.html">Sign In</a></button>
-          <button class="btn" id="registerBtn" onclick="register()"><a id="bs1" href="Registration_Document.html">Sign Up</a></button>
-        </div>
-        -->
-             <!-- From Uiverse.io by boryanakrasteva --> 
-             <div class="input-wrapper">
-              <form action="index.html">
-                  <button class="icon"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
-                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"></path>
-                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20"></path>
-                    </svg>
-                  </button>
-                  <input placeholder="search.." class="input" name="text" type="text">
-              </form>
-            </div> 
-    </nav>
-  </div>   
-  
-  <script type="text/javascript" src="Secript.js"></script>
-  <script type="text/javascript" src="be-Secript.js"></script>
+</nav>
 
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="script.js"></script>
+<script src="be-secript.js"></script>
 </body>
+
 </html>
